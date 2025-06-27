@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandGen - Create Your Brand Identity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo-icon.png" alt="BrandGen Logo">
+                <span>BrandGen</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Examples</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <button class="btn-primary">Sign In</button>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Create Your Perfect Brand Identity</h1>
+                    <p>Generate unique brand names and logos in seconds with our AI-powered platform.</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary">Get Started</button>
+                        <button class="btn-secondary">Watch Demo</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="logo-preview">
+                        <div class="generated-logo" id="logoPreview">
+                            <span id="logoText">YourBrand</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="generator-section">
+                <div class="generator-tabs">
+                    <button class="tab-btn active" data-tab="name-tab">Brand Name</button>
+                    <button class="tab-btn" data-tab="logo-tab">Logo Design</button>
+                </div>
+
+                <div class="tab-content active" id="name-tab">
+                    <div class="input-group">
+                        <label for="keywords">Describe your brand (keywords)</label>
+                        <input type="text" id="keywords" placeholder="e.g. eco-friendly, fashion, tech">
+                    </div>
+                    <div class="input-group">
+                        <label for="industry">Industry</label>
+                        <select id="industry">
+                            <option value="">Select industry</option>
+                            <option value="tech">Technology</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="health">Health & Wellness</option>
+                            <option value="finance">Finance</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" id="generateNameBtn">Generate Names</button>
+                    
+                    <div class="results" id="nameResults">
+                        <h3>Suggested Brand Names</h3>
+                        <div class="name-list" id="nameList">
+                            <!-- Names will be generated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="logo-tab">
+                    <div class="input-group">
+                        <label for="brandName">Brand Name</label>
+                        <input type="text" id="brandName" placeholder="Enter your brand name">
+                    </div>
+                    <div class="input-group">
+                        <label for="logoStyle">Logo Style</label>
+                        <select id="logoStyle">
+                            <option value="minimal">Minimal</option>
+                            <option value="modern">Modern</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="handwritten">Handwritten</option>
+                            <option value="3d">3D</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="colorScheme">Color Scheme</label>
+                        <div class="color-options">
+                            <div class="color-option" data-color="#FF6B6B" style="background-color: #FF6B6B;"></div>
+                            <div class="color-option" data-color="#4ECDC4" style="background-color: #4ECDC4;"></div>
+                            <div class="color-option" data-color="#45B7D1" style="background-color: #45B7D1;"></div>
+                            <div class="color-option" data-color="#FFA07A" style="background-color: #FFA07A;"></div>
+                            <div class="color-option" data-color="#98D8C8" style="background-color: #98D8C8;"></div>
+                            <div class="color-option" data-color="#F06292" style="background-color: #F06292;"></div>
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="generateLogoBtn">Generate Logo</button>
+                    
+                    <div class="results" id="logoResults">
+                        <h3>Logo Variations</h3>
+                        <div class="logo-gallery" id="logoGallery">
+                            <!-- Logos will be generated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features-section">
+                <h2>Why Choose BrandGen?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Quick Generation</h3>
+                        <p>Get dozens of brand name and logo suggestions in seconds.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Customizable</h3>
+                        <p>Fine-tune your brand identity with various styles and colors.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-cloud-download-alt"></i>
+                        <h3>Instant Download</h3>
+                        <p>Download high-resolution logos in multiple formats.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Trademark Check</h3>
+                        <p>Check name availability across major domains and trademarks.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BrandGen</h4>
+                    <p>The easiest way to create your perfect brand identity.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BrandGen. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
